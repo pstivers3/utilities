@@ -1,10 +1,10 @@
 #!/bin/bash
-# kill-rake
+# kill-rake.sh
 # Paul Stivers
 # last updated: 2011-12-31
 
 # this program will kill rake processes that have been running longer than the time_limit
-# and consuming more cpu than the cpu_limit.
+# and consume more cpu than the cpu_limit.
 
 # declare integer variables. This is not strictly required in bash, but is correct and more portable.
 declare -i time_limit cpu_limit etime_char_count min cpu_int
