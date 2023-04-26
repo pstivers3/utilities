@@ -1,0 +1,30 @@
+## assumptions
+
+1. The first remote listed from "git remote -v" points to the cloned repo.
+2. There is optionally a second remote listed from "git remote -v".
+3. There is not greater than 2 remotes.
+
+## perform the following in command line before running this script
+
+1. bring the  master branch up to date and ensure the working tree is clean
+
+    if there's an upstream remote
+
+        $ git checkout master
+        $ git pull upstream master
+        $ git push origin master
+
+    $ git status # ensure the working tree is clean
+
+## notes
+
+1. The name of the remotes isn't important. The script captures the name
+and URL of up to 2 remotes. Again, the script assumes that the first remote
+points to the cloned repo.
+
+2. the script echos out each command then runs the command, so that if
+you see errors in the outut,  you will know which command they came from.
+
+3. Run the script at the root of the repo.
+
+repo$ master-to-main.sh
